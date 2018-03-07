@@ -14,7 +14,17 @@ Also a asynchronous call (using the Async-Service) to `ipGeolocation` is availab
 
 If the REST service needs to have some authentication this can be done with an *Interceptor*. This *Interceptor* can be registered with an Intent (see package org.wimi.weatherbit.api.intent). This example does not make use of this (because the used api does not need it), instead a simple System.out is in the code.
 
-Just run *run-current-weather.bndrun* and use the mentioned gogo-commands.
+Just run *run-current-weather.bndrun* using eclipse and bndtools and use the mentioned gogo-commands.
+
+Alternative you can build the project with
+
+	./gradlew clean build export.run-current-weather
+
+and run it with
+
+	java -jar org.wimi.weatherbit.consumer.gogo/generated/distributions/executable/run-current-weather.jar
+
+
 
 ## Examples
 
@@ -52,7 +62,7 @@ Result
 
 **Command**
 
-	(ipGeolocation 128.65.210.185 93589643ffc74ba794c6dc2a7ec1dbc6 null null null) City
+	(ipGeolocation 128.65.210.185 <your_key> null null null) City
 
 **Result**
 
