@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/org/wimi/weatherbit/consumer/gogo/command/WeatherbitCommands.java=UTF-8
+encoding//test/org/wimi/weatherbit/consumer/gogo/command/ExampleCommandTest.java=UTF-8
+encoding/bnd.bnd=UTF-8
+encoding/readme.md=UTF-8

@@ -1,0 +1,277 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>local</groupId>
+	<artifactId>central</artifactId>
+	<version>0.0.0</version>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<aries.rsa.version>1.9.0</aries.rsa.version>
+		<cxf.version>3.1.7</cxf.version>
+	</properties>
+
+	<dependencies>
+		<!-- gogo -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.gogo.runtime</artifactId>
+		    <version>1.0.10</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.gogo.command</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.gogo.shell</artifactId>
+		    <version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.gogo.jline</artifactId>
+		    <version>1.0.10</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.jline</groupId>
+		    <artifactId>jline</artifactId>
+		    <version>3.2.0</version>
+		</dependency>
+
+		<!-- felix -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.fileinstall</artifactId>
+		    <version>3.5.8</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.eventadmin</artifactId>
+		    <version>1.4.6</version>
+		</dependency>
+
+		<!-- sonst -->
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>1.3.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+
+		<!-- fasterxml -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-base</artifactId>
+			<version>2.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.24</version>
+		</dependency>
+
+		<!--  aries -->
+		<dependency>
+			<groupId>org.apache.aries.rsa</groupId>
+			<artifactId>org.apache.aries.rsa.topology-manager</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.aries.rsa</groupId>
+			<artifactId>org.apache.aries.rsa.core</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+
+		<!-- swagger -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.5.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.servicemix.specs</groupId>
+			<artifactId>org.apache.servicemix.specs.jsr339-api-2.0.1</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-client</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.cxf.dosgi</groupId>
+		    <artifactId>cxf-dosgi-common</artifactId>
+		    <version>2.2.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.aries.rsa.discovery</groupId>
+		    <artifactId>org.apache.aries.rsa.discovery.local</artifactId>
+		    <version>${aries.rsa.version}</version>
+		</dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+            <version>${cxf.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+	        	<groupId>org.apache.aries.rsa</groupId>
+	        	<artifactId>org.apache.aries.rsa.spi</artifactId>
+	        	<version>${aries.rsa.version}</version>
+        </dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<version>2.6.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-core</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-features-logging</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-extension-providers</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf.dosgi</groupId>
+			<artifactId>cxf-dosgi-provider-rs</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-base</artifactId>
+			<version>2.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<version>2.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-base</artifactId>
+			<version>2.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jline</groupId>
+			<artifactId>jline</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+
+		<!-- aries async -->
+		<dependency>
+		    <groupId>org.apache.aries.async</groupId>
+		    <artifactId>org.apache.aries.async</artifactId>
+		    <version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.aries.async</groupId>
+		    <artifactId>org.apache.aries.async.impl</artifactId>
+		    <version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.aries.async</groupId>
+		    <artifactId>org.apache.aries.async.api</artifactId>
+		    <version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.aries.async</groupId>
+		    <artifactId>org.apache.aries.async.promise.api</artifactId>
+		    <version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.servicemix.bundles</groupId>
+		    <artifactId>org.apache.servicemix.bundles.cglib</artifactId>
+		    <version>2.1_3_7</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.ops4j.pax.logging</groupId>
+		    <artifactId>pax-logging-api</artifactId>
+		    <version>1.10.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.ops4j.pax.logging</groupId>
+		    <artifactId>pax-logging-service</artifactId>
+		    <version>1.10.0</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

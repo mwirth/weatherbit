@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/org/wimi/weatherbit/provider/async/IpGeolocationAsyncImpl.java=UTF-8
+encoding//test/org/wimi/weatherbit/provider/async/ProviderImplTest.java=UTF-8
+encoding/bnd.bnd=UTF-8
+encoding/debug.bndrun=UTF-8
+encoding/org.wimi.weatherbit.provider.async.bndrun=UTF-8
+encoding/readme.md=UTF-8

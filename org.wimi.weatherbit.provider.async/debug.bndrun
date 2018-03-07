@@ -1,0 +1,13 @@
+#
+# org.wimi.weatherbit.provider.async DEBUG LAUNCH SPECFICATION 
+#
+
+-include: ~org.wimi.weatherbit.provider.async.bndrun
+
+-runrequires.debug:  \
+	${debug-bundles}
+
+-runtrace: true
+
+-runbundles: \
+	${error;Resolve first}

@@ -1,0 +1,14 @@
+#
+# org.wimi.weatherbit.provider.async LAUNCH SPECIFICATION
+#
+
+
+Bundle-Version:				1.0.0.${tstamp}
+Bundle-SymbolicName:		org.wimi.weatherbit.provider.async.launch
+JPM-Command:				provider
+
+
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=org.wimi.weatherbit.provider.async.provider)'
+
+-runbundles: ${error;You must first resolve this bndrun file before you can run it}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint-descriptions xmlns="http://www.osgi.org/xmlns/rsa/v1.0.0">
+  <endpoint-description>
+    <property name="objectClass">
+      <array>
+        <value>org.wimi.weatherbit.api.CurrentWeather</value>
+      </array>
+    </property>
+    <property name="endpoint.id">CurrentWeather</property>
+    <property name="service.imported.configs" value="org.apache.cxf.rs"/>
+    <property name="org.apache.cxf.rs.address">http://api.weatherbit.io/v2.0/</property>
+    <property name="service.exported.intents">HTTP</property>
+	<property name="service.intents">
+		<list>
+			<value>jackson</value>
+		</list>
+	</property>
+  </endpoint-description>
+
+  <endpoint-description>
+    <property name="objectClass">
+      <array>
+        <value>org.wimi.weatherbit.api.IpGeolocation</value>
+      </array>
+    </property>
+    <property name="endpoint.id">IpGeolocation</property>
+    <property name="service.imported.configs" value="org.apache.cxf.rs"/>
+    <property name="org.apache.cxf.rs.address">http://api.weatherbit.io/v2.0/</property>
+    <property name="service.exported.intents">HTTP</property>
+	<property name="service.intents">
+		<list>
+			<value>jackson</value>
+		</list>
+	</property>
+  </endpoint-description>
+</endpoint-descriptions>
+
