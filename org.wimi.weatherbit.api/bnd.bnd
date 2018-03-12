@@ -27,7 +27,7 @@ Export-Package: \
 	com.fasterxml.jackson.core.jackson-databind;version=2.8,\
 	com.fasterxml.jackson.core.jackson-core;version=2.8
 
--includeresource: resources
+#-includeresource: resources
 
 -testpath: \
 	osgi.enroute.junit.wrapper;version=4.12, \
