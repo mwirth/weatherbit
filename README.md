@@ -25,7 +25,12 @@ and run it with
 	java -jar org.wimi.weatherbit.consumer.gogo/generated/distributions/executable/run-current-weather.jar
 
 
+## Configuration
 
+The endpoint to the remote REST service can be configured in the file `remote-services.xml` (1) which has to be inside the bundle or via a configuration file (2) which can be read from Apache Felix File install
+
+
+The project includes both solutions. Solution (2) in the **master**-branch, solution (1) in the branch **remote-service_inside_bundle**.
 ## Examples
 
 
