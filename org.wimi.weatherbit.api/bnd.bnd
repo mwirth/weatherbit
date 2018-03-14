@@ -11,7 +11,7 @@ Private-Package: org.wimi.weatherbit.api.intent
 -includeresource: {readme.md}
 
 # has to be added manually otherwise the launch configuration can not be resolved. There is no instance for these interfaces which can be annotated with the @Component annotation
-Provide-Capability: osgi.service;objectClass:List<String>="org.apache.cxf.dosgi.common.api.IntentsProvider",osgi.service;objectClass:List<String>="org.wimi.weatherbit.api.CurrentWeather",osgi.service;objectClass:List<String>="org.wimi.weatherbit.api.IpGeolocation",osgi.service;objectClass:List<String>="org.wimi.weatherbit.api.IpGeolocationAsync"
+Provide-Capability: osgi.service;objectClass:List<String>="org.wimi.weatherbit.api.CurrentWeather",osgi.service;objectClass:List<String>="org.wimi.weatherbit.api.IpGeolocation",osgi.service;objectClass:List<String>="org.wimi.weatherbit.api.IpGeolocationAsync"
 
 -buildpath: \
 	osgi.enroute.base.api;version=2.1,\
