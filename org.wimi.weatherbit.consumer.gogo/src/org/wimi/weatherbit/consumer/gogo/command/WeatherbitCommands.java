@@ -1,5 +1,6 @@
 package org.wimi.weatherbit.consumer.gogo.command;
 
+import org.apache.felix.service.command.Descriptor;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -16,7 +17,8 @@ import org.wimi.weatherbit.api.model.GeoIPObj;
 import osgi.enroute.debug.api.Debug;
 
 @Designate(ocd = WeatherbitCommands.Config.class, factory = true)
-@Component(service = WeatherbitCommands.class, //
+@Component(//
+		service = WeatherbitCommands.class, //
 		property = { //
 				Debug.COMMAND_SCOPE + "=weather", //
 				Debug.COMMAND_FUNCTION + "=currentObservationByStationId", //
@@ -89,7 +91,13 @@ public class WeatherbitCommands {
 	 * @param format
 	 * @return
 	 */
-	public GeoIPObj ipGeolocation(String ip, String key, String paramCallback, String exclude, String format) {
+	@Descriptor("Returns a geolocation object. Given an IP address. If no IP supplied, will use request IP address.")
+	public GeoIPObj ipGeolocation( //
+			@Descriptor("the ip") String ip, //
+			@Descriptor("your key") String key, //
+			@Descriptor("paramCallback") String paramCallback, //
+			@Descriptor("exclude") String exclude, //
+			@Descriptor("format") String format) {
 		try {
 			GeoIPObj ipipipGet = ipGeolocation.getGeolocation(ip, key, paramCallback, exclude, format);
 			return ipipipGet;
